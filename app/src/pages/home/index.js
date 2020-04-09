@@ -1,18 +1,11 @@
 import React from 'react';
-import Avatar from '../../components/Avatar/index';
-import Menu from '../../components/Menu/index';
-import RecentPosts from '../../components/RecentPosts/index';
-import SocialMedia from '../../components/SocialMedia/index';
+import MainLayout from '../../layouts/MainLayout/index';
 import './home.css';
 
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="homeBox">
-        <section className="leftBox">
-          <Avatar />
-          <Menu />          
-        </section>
+      <MainLayout>
         <section className="contentBox">
           <ul>
             <li>
@@ -200,11 +193,7 @@ export default class Home extends React.Component {
             </li>
           </ul>
         </section>
-        <section className="rightBox">          
-          <RecentPosts />
-          <SocialMedia />
-        </section>
-      </div>
+      </MainLayout>
     );
   }
 }
