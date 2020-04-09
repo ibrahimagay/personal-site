@@ -1,4 +1,7 @@
 import React from 'react';
+import Avatar from '../../components/Avatar/index';
+import Menu from '../../components/Menu/index';
+import RecentPosts from '../../components/RecentPosts/index';
 import SocialMedia from '../../components/SocialMedia/index';
 import './home.css';
 
@@ -7,25 +10,8 @@ export default class Home extends React.Component {
     return (
       <div className="homeBox">
         <section className="leftBox">
-          <div className="top">
-            <a href="https://www.google.com.tr/" className="bgImage">Logo</a>
-          </div>
-          <div className="bottom">
-            <ul>
-              <li>
-                <a href="https://www.google.com.tr/">HOME</a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">ABOUT</a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">BLOG</a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">CONTACT</a>
-              </li>
-            </ul>
-          </div>
+          <Avatar />
+          <Menu />          
         </section>
         <section className="contentBox">
           <ul>
@@ -214,37 +200,8 @@ export default class Home extends React.Component {
             </li>
           </ul>
         </section>
-        <section className="rightBox">
-          <div className="recentPosts">
-            <div className="title">RECENT POSTS</div>
-            <ul>
-              <li>
-                <a href="https://www.google.com.tr/">
-                  Lorem ipsum is placeholder text commonly used in the graphic
-                </a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">
-                  Lorem ipsum is placeholder text commonly used in the graphic
-                </a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">
-                  Lorem ipsum is placeholder text commonly used in the graphic
-                </a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">
-                  Lorem ipsum is placeholder text commonly used in the graphic
-                </a>
-              </li>
-              <li>
-                <a href="https://www.google.com.tr/">
-                  Lorem ipsum is placeholder text commonly used in the graphic
-                </a>
-              </li>
-            </ul>
-          </div>
+        <section className="rightBox">          
+          <RecentPosts />
           <SocialMedia />
         </section>
       </div>
