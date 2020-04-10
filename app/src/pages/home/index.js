@@ -20,7 +20,7 @@ export default class Home extends React.Component {
         <section className="contentBox">
           <ul>
             <li>
-              <a href="https://www.google.com.tr/">
+              <a href="javascript:;">
                 <div className="number">
                   - <span>01</span> -
                 </div>
