@@ -3,8 +3,15 @@ import MainLayout from "../../layouts/MainLayout/index";
 import "./home.scss";
 
 export default class Home extends React.Component {
-  handleChange(e) {
-    document.title = e.target.value;
+  constructor(props) {
+    super(props);
+    this.state = { name: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ name: event.target.value });
   }
 
   render() {
@@ -18,6 +25,8 @@ export default class Home extends React.Component {
                   - <span>01</span> -
                 </div>
                 <div className="title">
+                  <em>Benim adım, {this.state.name}</em>
+                  <br />
                   <input onChange={this.handleChange} />
                   Lorem ipsum is placeholder text commonly used in the graphic,
                   print, and publishing industries for previewing layouts and
