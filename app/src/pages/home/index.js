@@ -1,6 +1,5 @@
 import React from "react";
 import MainLayout from "../../layouts/MainLayout/index";
-import "./home.css";
 import "./home.scss";
 
 export default class Home extends React.Component {
