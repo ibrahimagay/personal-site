@@ -23,8 +23,8 @@ export default function RecentPosts(props) {
     <div className="recentPosts">
       <div className="title">RECENT POSTS</div>
       <ul>
-        {recentPosts.map((item) => (
-          <RecentPostsItem {...item} />
+        {recentPosts.map((item,index) => (
+          <RecentPostsItem key={index} {...item} />
         ))}
       </ul>
     </div>
