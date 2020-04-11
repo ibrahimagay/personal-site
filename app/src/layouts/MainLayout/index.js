@@ -6,7 +6,6 @@ import SocialMedia from '../../components/SocialMedia/index';
 
 export default function MainLayout(props) {
   return (
-    <div className="metin">
       <div className="homeBox">
         <section className="leftBox">
           <Avatar />
@@ -18,6 +17,5 @@ export default function MainLayout(props) {
           <SocialMedia />
         </section>
       </div>
-    </div>
   );
 }

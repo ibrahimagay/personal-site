@@ -1,5 +1,5 @@
 import React from 'react';
-import './list.css';
+import './_list.scss';
 
 export default class List extends React.Component {
   render() {
