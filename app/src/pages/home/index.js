@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayout from "../../layouts/MainLayout/index";
+import MainLayout from "../../layouts/MainLayout/mainLayout";
 import "./home.scss";
 
 export default class Home extends React.Component {
@@ -25,9 +25,6 @@ export default class Home extends React.Component {
                   - <span>01</span> -
                 </div>
                 <div className="title">
-                  <em>Benim adım, {this.state.name}</em>
-                  <br />
-                  <input onChange={this.handleChange} />
                   Lorem ipsum is placeholder text commonly used in the graphic,
                   print, and publishing industries for previewing layouts and
                   visual mockups.

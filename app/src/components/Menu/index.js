@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Menu(props) {
   const menuMap = [
-    { name: 'Home', href: 'https://www.google.com.tr/' },
-    { name: 'About', href: 'https://www.google.com.tr/'},
-    { name: 'Blog', href: 'https://www.google.com.tr/'},
-    { name: 'Contact', href: 'https://www.google.com.tr/'},
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/about' },
+    { name: 'Blog', to: '/blog' },
+    { name: 'Contact', to: '/contact' },
   ];
   return (
     <div className="bottom">
       <ul>
-        {menuMap.map((item,index) => (
+        {menuMap.map((item, index) => (
           <MenuItems key={index} {...item} />
         ))}
       </ul>
@@ -22,7 +23,7 @@ function MenuItems(props) {
   const { name, ...anchorProps } = props;
   return (
     <li>
-      <a {...anchorProps}>{name}</a>
+      <Link {...anchorProps}>{name}</Link>
     </li>
   );
 }

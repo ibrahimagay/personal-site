@@ -85,57 +85,55 @@ body {
   box-sizing: content-box;
 }
 
-.main .homeBox .contentBox ul {
+.main .homeBox .contentBox .contactForm {
   width: 100%;
+  padding: 60px 250px;
 }
 
-.main .homeBox .contentBox ul li {
+.main .homeBox .contentBox .contactForm h1 {
   width: 100%;
-  border-bottom: 2px solid #dedede;
-  transition: background-color .4s ease;
-}
-
-.main .homeBox .contentBox ul li:hover {
-  background-color: #ececec;
-}
-
-.main .homeBox .contentBox ul li:last-child {
-  border: none;
-}
-
-.main .homeBox .contentBox ul li a {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 60px 0;
-}
-
-.main .homeBox .contentBox ul li .number {
-  width: 100%;
+  margin: 0 0 45px 0;
   text-align: center;
   font-size: 48px;
-  margin: 0 0 15px 0;
   color: #42a67b;
   font-style: italic;
 }
 
-.main .homeBox .contentBox ul li .title {
+.main .homeBox .contentBox .contactForm form {
   width: 100%;
-  color: #323232;
-  margin: 0 0 30px 0;
-  padding: 0 20%;
-  font-size: 22px;
-  line-height: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
-.main .homeBox .contentBox ul li .desc {
+.main .homeBox .contentBox .contactForm form input {
   width: 100%;
-  color: #42a67b;
-  margin: 0 0 0 0;
-  padding: 0 20%;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: normal;
+  height: 60px;
+  border: 2px solid #dedede;
+  padding: 0 15px;
+  outline: none;
+  background: none;
+  margin: 0 0 30px 0;
+  display: flex;
+}
+
+.main .homeBox .contentBox .contactForm form input[type='submit'] {
+  background: #323232;
+  justify-content: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.main .homeBox .contentBox .contactForm form textarea {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #dedede;
+  padding: 15px 15px;
+  outline: none;
+  resize: none;
+  background: none;
+  margin: 0 0 30px 0;
+  display: flex;
 }
 
 .main .homeBox .rightBox {
