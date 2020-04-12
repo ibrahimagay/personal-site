@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "../../layouts/MainLayout/mainLayout";
-import "./home.scss";
+import "./_home.scss";
 
 export default class Home extends React.Component {
   constructor(props) {
