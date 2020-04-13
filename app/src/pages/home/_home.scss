@@ -29,7 +29,7 @@ body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14
             }
         }
         .rightBox{width:275px; height: 100vh; position: fixed; top:0; right:0; padding: 20px 0; display: flex; flex-direction: column; border-left:2px solid #dedede;
-            .recentPosts{width:100%; display:flex;flex-direction: column; padding:20px 15px;  border-bottom:2px solid #dedede;
+            .recentPosts{width:100%; display:flex;flex-direction: column; padding:20px 15px;  border-bottom:2px solid #dedede; position: relative;
                 .title{width:100%; letter-spacing: 2px; margin:0 0 20px 0;}
                 ul{width:100%; padding: 0 5px 0 30px; 
                     li{width:100%; margin: 0 0 15px 0; position: relative;
@@ -56,3 +56,5 @@ body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14
         }
     }
 }
+
+.mask{width:100%; height: 100%; position: absolute; top:0; left:0; background-color: red; opacity: 0.5; z-index:99;}

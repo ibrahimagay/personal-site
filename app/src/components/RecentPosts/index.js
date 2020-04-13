@@ -1,42 +1,59 @@
 import React from 'react';
 
-export default function RecentPosts(props) {
-  const recentPosts = [
-    {
-      name: 'Lorem ipsum is placeholder text commonly 01',
-      href: 'https://www.google.com.tr/',
-    },
-    {
-      name: 'Lorem ipsum is placeholder text commonly 02',
-      href: 'https://www.google.com.tr/',
-    },
-    {
-      name: 'Lorem ipsum is placeholder text commonly 03',
-      href: 'https://www.google.com.tr/',
-    },
-    {
-      name: 'Lorem ipsum is placeholder text commonly 04',
-      href: 'https://www.google.com.tr/',
-    },
-  ];
-  return (
-    <div className="recentPosts">
-      <div className="title">RECENT POSTS</div>
-      <ul>
-        {recentPosts.map((item,index) => (
-          <RecentPostsItem key={index} {...item} />
-        ))}
-      </ul>
-    </div>
-  );
+export default class RecentPosts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+      isLoading: true,
+    };
+  }
+
+  componentWillMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts?_limit=0')
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({
+          posts: json,
+          isLoading: false,
+        });
+      });
+  }
+
+  renderPosts() {
+    if (this.state.posts.length === 0) {
+      return <span style={{color:"red"}}>YETERLİ KAYIT BULUNAMADI!</span>;
+    } else {
+      return (
+        <ul>
+          {this.state.posts.map(function (item) {
+            return <RecentPostsItem key={item.id} {...item} />;
+          })}
+        </ul>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div className="recentPosts">
+        <div className="title">RECENT POSTS</div>
+        {this.state.isLoading ? (
+          <div className="mask"></div>
+        ) : (
+          this.renderPosts()
+        )}
+      </div>
+    );
+  }
 }
-
 function RecentPostsItem(props) {
-  const { name, ...anchorProps } = props;
-
+  const { title, userId, ...anchorProps } = props;
   return (
     <li>
-      <a {...anchorProps}>{name}</a>
+      <a {...anchorProps} href={title}>
+        {title}
+      </a>
     </li>
   );
 }
