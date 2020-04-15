@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Menu(props) {
   const menuMap = [
-    { name: 'Home', to: '/' },
+    { name: 'Home', to: '/', exact:true },
     { name: 'About', to: '/about' },
     { name: 'Blog', to: '/blog' },
     { name: 'Contact', to: '/contact' },
@@ -23,7 +23,7 @@ function MenuItems(props) {
   const { name, ...anchorProps } = props;
   return (
     <li>
-      <Link {...anchorProps}>{name}</Link>
+      <NavLink activeClassName="menuActive" {...anchorProps}>{name}</NavLink>
     </li>
   );
 }

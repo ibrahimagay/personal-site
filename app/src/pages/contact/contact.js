@@ -1,5 +1,4 @@
 import React from 'react';
-import MainLayout from '../../layouts/MainLayout/mainLayout';
 import './_contact.scss';
 
 export default class Contact extends React.Component {
@@ -47,7 +46,6 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <MainLayout>
         <section className="contentBox">
           <div className="contactForm">
             <h1>- CONTACT FORM -</h1>
@@ -100,7 +98,6 @@ export default class Contact extends React.Component {
             </form>
           </div>
         </section>
-      </MainLayout>
     );
   }
 }

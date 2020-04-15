@@ -10,7 +10,7 @@ export default class RecentPosts extends React.Component {
   }
 
   componentWillMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=0')
+    fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => response.json())
       .then((json) => {
         this.setState({
@@ -22,11 +22,11 @@ export default class RecentPosts extends React.Component {
 
   renderPosts() {
     if (this.state.posts.length === 0) {
-      return <span style={{color:"red"}}>YETERLİ KAYIT BULUNAMADI!</span>;
+      return <span style={{ color: 'red' }}>YETERLİ KAYIT BULUNAMADI!</span>;
     } else {
       return (
         <ul>
-          {this.state.posts.map(function (item) {
+          {this.state.posts.slice(0,10).map(function (item) {
             return <RecentPostsItem key={item.id} {...item} />;
           })}
         </ul>

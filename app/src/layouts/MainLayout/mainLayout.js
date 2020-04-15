@@ -1,8 +1,9 @@
 import React from 'react';
-import Avatar from '../../components/Avatar/index';
-import Menu from '../../components/Menu/index';
-import RecentPosts from '../../components/RecentPosts/index';
-import SocialMedia from '../../components/SocialMedia/index';
+import './_mainLayout.scss';
+import Avatar from '../../components/Avatar/avatar.js';
+import Menu from '../../components/Menu/menu.js';
+import RecentPosts from '../../components/RecentPosts/recentPosts.js';
+import SocialMedia from '../../components/SocialMedia/socialMedia.js';
 
 export default function MainLayout(props) {
   return (
