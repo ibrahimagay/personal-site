@@ -2,29 +2,46 @@ import React from 'react';
 import Pagination from 'react-js-pagination';
 
 export default class BlogPosts extends React.Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       posts: [],
       isLoading: true,
-      activePage: 0,
+      activePage:
+        parseInt(new URLSearchParams(window.location.search).get('sayfa')) || 1,
+      totalCount: 0,
     };
   }
 
-  
   handlePageChange(pageNumber) {
-    this.setState({activePage: pageNumber});
+    // window.location= `?sayfa=${pageNumber}`;
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    this.setState({ activePage: pageNumber }, () =>
+      this.fetchPosts(pageNumber)
+    );
   }
 
-  componentWillMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((json) => {
+  fetchPosts() {
+    fetch(
+      `https://jsonplaceholder.typicode.com/posts?_page=${this.state.activePage}&_limit=10`
+    )
+      .then((response) => {
         this.setState({
-          posts: json,
+          totalCount: parseInt(response.headers.get('x-total-count')),
+        });
+        return response.json();
+      })
+      .then((posts) => {
+        this.setState({
+          posts: posts,
           isLoading: false,
         });
       });
+  }
+
+  componentWillMount() {
+    console.log('componentWillMount');
+    this.fetchPosts();
   }
 
   blogPosts() {
@@ -33,7 +50,7 @@ export default class BlogPosts extends React.Component {
     } else {
       return (
         <ul>
-          {this.state.posts.slice(0, 25).map(function (item) {
+          {this.state.posts.slice(0, 10).map(function (item) {
             return <BlogPostsItem key={item.id} {...item} />;
           })}
         </ul>
@@ -53,8 +70,8 @@ export default class BlogPosts extends React.Component {
         </ul>
         <Pagination
           activePage={this.state.activePage}
-          itemsCountPerPage={5}
-          totalItemsCount={450}
+          itemsCountPerPage={10}
+          totalItemsCount={this.state.totalCount}
           pageRangeDisplayed={5}
           onChange={this.handlePageChange.bind(this)}
         />
@@ -63,10 +80,10 @@ export default class BlogPosts extends React.Component {
   }
 }
 function BlogPostsItem(props) {
-  const { title,body,id,userId, ...anchorProps } = props;
+  const { title, body, id, userId, ...anchorProps } = props;
   return (
     <li>
-      <a {...anchorProps} href="javascript:;">        
+      <a {...anchorProps} href="{title}" target="_blank">
         <div className="number">
           - <span>{id}</span> -
         </div>
