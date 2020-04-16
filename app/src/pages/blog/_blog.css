@@ -13,6 +13,7 @@
 
 .blogBox ul.blogUl {
   width: 100%;
+  position: relative;
 }
 
 .blogBox ul.blogUl li {
@@ -23,10 +24,6 @@
 
 .blogBox ul.blogUl li:hover {
   background-color: #ececec;
-}
-
-.blogBox ul.blogUl li:last-child {
-  border: none;
 }
 
 .blogBox ul.blogUl li a {
@@ -62,4 +59,35 @@
   font-size: 16px;
   line-height: 26px;
   font-weight: normal;
+}
+
+.blogBox .pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.blogBox .pagination li {
+  margin: 0 10px;
+}
+
+.blogBox .pagination li.active a {
+  background-color: #282828;
+}
+
+.blogBox .pagination li a {
+  width: 40px;
+  height: 40px;
+  color: #42a67b;
+  background: #585858;
+  transition: all .4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogBox .pagination li a:hover, .blogBox .pagination li a.active {
+  background-color: #282828;
 }

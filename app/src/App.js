@@ -10,20 +10,20 @@ function App() {
   return (
     <div className="main">
       <MainLayout>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/contact">
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/contact">
           <Contact />
         </Route>
-        </Switch>
+      </Switch>
       </MainLayout>
     </div>
   );
