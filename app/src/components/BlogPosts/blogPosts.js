@@ -1,9 +1,11 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
+import { withRouter } from 'react-router';
 
-export default class BlogPosts extends React.Component {
+class BlogPosts extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props.history);
     this.state = {
       posts: [],
       isLoading: true,
@@ -14,7 +16,7 @@ export default class BlogPosts extends React.Component {
   }
 
   handlePageChange(pageNumber) {
-    // window.location= `?sayfa=${pageNumber}`;
+    this.props.history.push(`/blog?sayfa=${pageNumber}`);
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     this.setState({ activePage: pageNumber }, () =>
       this.fetchPosts(pageNumber)
@@ -78,7 +80,11 @@ export default class BlogPosts extends React.Component {
       </div>
     );
   }
+
 }
+
+export default withRouter(BlogPosts);
+
 function BlogPostsItem(props) {
   const { title, body, id, userId, ...anchorProps } = props;
   return (
