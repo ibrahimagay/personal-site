@@ -1,6 +1,6 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
-import { withRouter } from 'react-router';
+import {withRouter} from 'react-router';
 
 class BlogPosts extends React.Component {
   constructor(props) {
@@ -84,6 +84,7 @@ class BlogPosts extends React.Component {
 }
 
 export default withRouter(BlogPosts);
+
 
 function BlogPostsItem(props) {
   const { title, body, id, userId, ...anchorProps } = props;
