@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import MainLayout from "./layouts/MainLayout/mainLayout";
 import Home from './pages/home/home.js';
 import Blog from './pages/blog/blog.js';
+import News from './pages/news/news.js';
 import About from './pages/about/about.js';
 import Contact from './pages/contact/contact.js';
 
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/blog">
           <Blog />
+        </Route>
+        <Route path="/news">
+          <News />
         </Route>
         <Route path="/contact">
           <Contact />

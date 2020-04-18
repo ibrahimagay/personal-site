@@ -6,6 +6,7 @@ export default function Menu(props) {
     { name: 'Home', to: '/', exact:true },
     { name: 'About', to: '/about' },
     { name: 'Blog', to: '/blog' },
+    { name: 'News', to: '/news' },
     { name: 'Contact', to: '/contact' },
   ];
   return (
