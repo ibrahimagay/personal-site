@@ -52,7 +52,7 @@ class BlogPosts extends React.Component {
     } else {
       return (
         <ul>
-          {this.state.posts.slice(0, 10).map(function (item) {
+          {this.state.posts.map(function (item) {
             return <BlogPostsItem key={item.id} {...item} />;
           })}
         </ul>

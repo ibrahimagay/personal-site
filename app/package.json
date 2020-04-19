@@ -5,8 +5,10 @@
   "dependencies": {
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-content-loader": "^5.0.4",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
+    "react-loading-skeleton": "^2.0.1",
     "react-paginate": "^6.3.2",
     "react-parallax-component": "^1.0.6",
     "react-router-dom": "^5.1.2",
