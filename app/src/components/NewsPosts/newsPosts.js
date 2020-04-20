@@ -14,7 +14,7 @@ class NewsPosts extends React.Component {
           pageParam="page"
           fetchData={async (page) => {
             let jsonFetch = await fetch(
-              `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`
+              `https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=10`
             );
             return jsonFetch.json();
           }}
@@ -39,7 +39,7 @@ class NewsPosts extends React.Component {
             <ul className="newsUl">
               {data.map((item) => (
                 <li key={item.id}>
-                  <Link to={`/item/${item}`}>
+                  <Link to={`/news/${item.index}`}>
                     <div className="box">
                       <div className="top">
                         <div
@@ -47,14 +47,14 @@ class NewsPosts extends React.Component {
                           style={{
                             backgroundImage:
                               'url(' +
-                              'https://www.codewall.co.uk/wp-content/uploads/2019/02/interesting-vs-code-extensions-february-2019.jpg' +
+                              `${item.thumbnailUrl}` +
                               ')',
                           }}
                         ></div>
                       </div>
                       <div className="bottom">
                         <div className="title">{item.title}</div>
-                        <div className="desc">{item.body}</div>
+                        <div className="desc">{item.title}</div>
                       </div>
                     </div>
                   </Link>

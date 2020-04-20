@@ -7,13 +7,16 @@
     "react": "^16.13.1",
     "react-content-loader": "^5.0.4",
     "react-dom": "^16.13.1",
+    "react-id-swiper": "^3.0.0",
     "react-js-pagination": "^3.0.3",
     "react-loading-skeleton": "^2.0.1",
     "react-paginate": "^6.3.2",
     "react-parallax-component": "^1.0.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-scrollable-pagination": "^1.0.2"
+    "react-scrollable-pagination": "^1.0.2",
+    "react-slick": "^0.25.2",
+    "swiper": "^5.3.7"
   },
   "scripts": {
     "start": "react-scripts start",

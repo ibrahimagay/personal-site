@@ -1,3 +1,17 @@
-.aboutBox{width:100%; padding: 60px 250px;
-    h1{width:100%; margin:0 0 45px 0; text-align: center;font-size:48px;color:#42a67b; font-style:italic;}                
+.aboutBox{width:100%; padding: 60px 250px; display: flex; flex-direction: column;
+    .top{width:100%; display: flex; align-self: center; justify-content: center; margin: 0 0 45px 0;
+        h1{background-color: #323232; font-size: 24px; padding: 10px 30px; font-weight: bold; color: white; letter-spacing: 2px; }
+    }
+    .center{width:100%; display: flex; flex-direction: column; color: #42a67b;font-size: 16px; line-height: 24px;  margin: 0 0 30px 0;
+        span{font-weight: bold; color: #323232; margin: 0 0 15px 0;}
+        ul{width:100%; display:flex; flex-direction: column; list-style: disc; padding: 0 5px 0 30px;
+            li{position: relative; width: 100%; display: flex;
+                &:before { content: ''; width: 6px; height: 6px; background: #282828; border-radius: 50%; position: absolute; left: -20px; top: 9px; }
+            }
+        }
+    
+    }
+    .bottom{width:100%; position: relative;
+        img{width:100%;}
+    }
 }
