@@ -8,7 +8,7 @@ class NewsPosts extends React.Component {
   render() {    
     return (
       <div className="newsBox">
-        <h1>- NEWS -</h1>
+        <h1>- PROJECT -</h1>
         <Scroller
           className="newsApiBox"
           pageParam="page"
@@ -39,7 +39,7 @@ class NewsPosts extends React.Component {
             <ul className="newsUl">
               {data.map((item) => (
                 <li key={item.id}>
-                  <Link to={`/news/${item.index}`}>
+                  <Link to={`/project/${item.index}`}>
                     <div className="box">
                       <div className="top">
                         <div

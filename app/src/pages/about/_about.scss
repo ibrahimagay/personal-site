@@ -13,5 +13,11 @@
     }
     .bottom{width:100%; position: relative;
         img{width:100%;}
+        .slick-dots{bottom:-30px; z-index: 2; 
+            li{width:10px; height: 10px; background-color:#42a67b; border-radius: 50%; overflow: hidden;
+                &.slick-active{background-color: #282828;}
+                button{width:100%; height:100%; text-indent: -999px; }
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14
             .bottom{width:100%; display: flex;
                 ul{width: 100%;
                     li{width:100%; display:flex;
-                        a{width:100%; text-align:center; padding:20px 20px; color:#42a67b; border-bottom:2px solid #585858; transition: all .4s ease;                         
+                        a{width:100%; text-align:center; padding:20px 20px; color:#42a67b; border-bottom:2px solid #585858; transition: all .4s ease; font-size: 16px; letter-spacing: 2px;                        
                             &:hover, &.menuActive{color: #42a67b; background-color: #282828;}
                         }
                     }

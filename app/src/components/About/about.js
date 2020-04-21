@@ -7,10 +7,13 @@ class About extends React.Component {
   render() {
     const settings = {
       dots: true,
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: true,
+      cssEase: 'linear'
     };
     return (
       <section className="contentBox">

@@ -71,3 +71,26 @@
 .aboutBox .bottom img {
   width: 100%;
 }
+
+.aboutBox .bottom .slick-dots {
+  bottom: -30px;
+  z-index: 2;
+}
+
+.aboutBox .bottom .slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #42a67b;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.aboutBox .bottom .slick-dots li.slick-active {
+  background-color: #282828;
+}
+
+.aboutBox .bottom .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  text-indent: -999px;
+}
