@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Menu(props) {
   const menuMap = [
-    { name: 'HOME', to: '/', exact:true },
-    { name: 'ABOUT', to: '/about' },
+    // { name: 'HOME', to: '/', exact:true },
     { name: 'BLOG', to: '/blog' },
     { name: 'PROJECT', to: '/project' },
     { name: 'CONTACT', to: '/contact' },

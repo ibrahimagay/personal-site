@@ -63,6 +63,7 @@ class BlogPosts extends React.Component {
   render() {
     return (
       <div className="blogBox">
+        <h1>- BLOG -</h1>
         <ul className="blogUl">
           {this.state.isLoading ? (
             <div className="mask"></div>

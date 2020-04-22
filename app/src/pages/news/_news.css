@@ -9,13 +9,13 @@
   margin: 0;
   text-align: center;
   font-size: 48px;
-  color: #42a67b;
+  color: #323232;
   font-style: italic;
   position: fixed;
   top: 0;
   left: 275px;
   z-index: 2;
-  background-color: #faf8f8;
+  background-color: #ececec;
 }
 
 .newsBox .newsApiBox {
