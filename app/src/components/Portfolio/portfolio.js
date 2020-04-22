@@ -4,11 +4,11 @@ import ReactScrollablePagination from 'react-scrollable-pagination';
 const Scroller = withRouter(ReactScrollablePagination);
 
 
-class NewsPosts extends React.Component {
+class Portfolio extends React.Component {
   render() {    
     return (
       <div className="newsBox">
-        <h1>- PROJECT -</h1>
+        <h1>- PORTFOLIO -</h1>
         <Scroller
           className="newsApiBox"
           pageParam="page"
@@ -68,4 +68,4 @@ class NewsPosts extends React.Component {
   }
 }
 
-export default withRouter(NewsPosts);
+export default withRouter(Portfolio);

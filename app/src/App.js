@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import MainLayout from "./layouts/MainLayout/mainLayout";
 import Home from './pages/home/home.js';
 import Blog from './pages/blog/blog.js';
-import News from './pages/news/news.js';
+import Portfolio from './pages/portfolio/portfolio.js';
 import Contact from './pages/contact/contact.js';
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Route path="/blog">
           <Blog />
         </Route>
-        <Route path="/project">
-          <News />
+        <Route path="/portfolio">
+          <Portfolio />
         </Route>
         <Route path="/contact">
           <Contact />
