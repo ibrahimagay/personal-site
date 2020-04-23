@@ -39,7 +39,7 @@ class Portfolio extends React.Component {
             <ul className="newsUl">
               {data.map((item) => (
                 <li key={item.id}>
-                  <Link to={`/project/${item.index}`}>
+                  <Link to={`/portfolio/${item.index}`}>
                     <div className="box">
                       <div className="top">
                         <div

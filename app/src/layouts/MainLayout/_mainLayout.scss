@@ -1,8 +1,8 @@
 *{box-sizing: border-box; list-style: none; text-decoration: none; margin:0; padding:0; }
 body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14px;}
-.main{width:100%; height: 100vh; display: flex; overflow: hidden;
+.main{width:100%;  display: flex; overflow: hidden;
     .homeBox{width:100%; display:flex;
-        .leftBox{width:275px; height: 100%; position: fixed; top:0; left:0; display: flex; flex-direction:column; background: #323232; overflow: hidden;
+        .leftBox{width:275px; height: 100vh; position: fixed; top:0; left:0; display: flex; flex-direction:column; background: #323232; overflow: hidden;
             .top{width:100%; display:flex; flex-direction: column; position: relative;
                 .bgImage{width: 100%; height: 275px;  background:url('https://instagram.fsaw2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/14334712_1744129595837784_8308303587717414912_n.jpg?_nc_ht=instagram.fsaw2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=cCsBxx4DFSoAX_K4VxP&oh=7837120e74e1f9870051100115266c16&oe=5EB99F0D')no-repeat top center; background-size:cover; position: relative;
                     &:after{content:''; width:100%; height: 100%; background-color: black; opacity: 0.2; position: absolute; top:0; left: 0; z-index: 1;}
@@ -19,8 +19,8 @@ body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14
                 }
             }
         }
-        .contentBox{width:calc(100% - 550px); height: 100%; overflow-y: auto; margin: 0 275px 0;  display: flex; justify-content: center; box-sizing: content-box;}
-        .rightBox{width:275px; height: 100%; position: fixed; top:0; right:0; padding: 20px 0; display: flex; flex-direction: column; border-left:2px solid #dedede;
+        .contentBox{width:calc(100% - 550px); height: 100%;margin: 0 275px 0;  display: flex; justify-content: center; box-sizing: content-box;}
+        .rightBox{width:275px; height: 100vh; position: fixed; top:0; right:0; padding: 20px 0; display: flex; flex-direction: column; border-left:2px solid #dedede;
             .recentPosts{width:100%; display:flex;flex-direction: column; padding:20px 15px;  border-bottom:2px solid #dedede; position: relative;
                 .title{width:100%; letter-spacing: 2px; margin:0 0 20px 0;}
                 ul{width:100%; padding: 0 5px 0 30px; 

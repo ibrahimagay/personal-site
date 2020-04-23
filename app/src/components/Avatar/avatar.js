@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 export default function Avatar(props) {
   return (
@@ -16,8 +16,7 @@ function AvatarItems(props) {
   const { name, ...anchorProps } = props;
   return (
     <div className="top">
-      <NavLink {...anchorProps}><h1>{name}</h1></NavLink>
-      
+      <NavLink {...anchorProps}><h1>{name}</h1></NavLink>      
     </div>
   );
 }

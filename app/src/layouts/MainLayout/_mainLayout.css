@@ -15,7 +15,6 @@ body {
 
 .main {
   width: 100%;
-  height: 100vh;
   display: flex;
   overflow: hidden;
 }
@@ -27,7 +26,7 @@ body {
 
 .main .homeBox .leftBox {
   width: 275px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -110,7 +109,6 @@ body {
 .main .homeBox .contentBox {
   width: calc(100% - 550px);
   height: 100%;
-  overflow-y: auto;
   margin: 0 275px 0;
   display: flex;
   justify-content: center;
@@ -119,7 +117,7 @@ body {
 
 .main .homeBox .rightBox {
   width: 275px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
