@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout/mainLayout";
 import Home from './pages/home/home.js';
 import Blog from './pages/blog/blog.js';
 import Portfolio from './pages/portfolio/portfolio.js';
+import PortfolioDetail from './pages/portfolio/portfolioDetail.js';
 import Contact from './pages/contact/contact.js';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/portfolio">
           <Portfolio />
+        </Route>
+        <Route path="/portfolioDetail">
+          <PortfolioDetail />
         </Route>
         <Route path="/contact">
           <Contact />

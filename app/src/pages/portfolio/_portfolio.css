@@ -33,7 +33,7 @@
 .newsBox ul.newsUl li {
   width: 50%;
   padding: 0 30px;
-  margin: 0 0 45px 0;
+  margin: 0 0 30px 0;
   display: inline-block;
 }
 
@@ -46,7 +46,7 @@
 .newsBox ul.newsUl li .box .top {
   width: 100%;
   margin: 0 0 15px 0;
-  height: 245px;
+  height: 275px;
 }
 
 .newsBox ul.newsUl li .box .top .bgImage {
@@ -91,6 +91,109 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   word-break: break-word;
+}
+
+.portfolioDetail {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.portfolioDetail h1 {
+  width: calc(100% - 550px);
+  padding: 30px 0 15px 0;
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+  color: #323232;
+  font-style: italic;
+  position: fixed;
+  top: 0;
+  left: 275px;
+  z-index: 2;
+  background-color: #ececec;
+}
+
+.portfolioDetail .portfolioDetailBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 150px 0 0 0;
+}
+
+.portfolioDetail .portfolioDetailBox .container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.portfolioDetail .portfolioDetailBox .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #42a67b;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.portfolioDetail .portfolioDetailBox .center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.portfolioDetail .portfolioDetailBox .center img {
+  width: 100%;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 100px 0;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom .btn {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  background: #ecedef;
+  color: #23262c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background .4s ease-in-out;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom .btn:hover {
+  background: #23262c;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom .btn:hover .text, .portfolioDetail .portfolioDetailBox .bottom .btn:hover .web {
+  color: #fff;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom .btn .text {
+  font-size: 30px;
+  line-height: 40px;
+  color: #23262c;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  transition: color .4s ease-in-out;
+}
+
+.portfolioDetail .portfolioDetailBox .bottom .btn .web {
+  font-size: 16px;
+  line-height: 20px;
+  color: #23262c;
+  font-weight: normal;
+  transition: color .4s ease-in-out;
+}
+
+.main .homeBox .contentBox {
+  background: white;
 }
 
 .loader {
