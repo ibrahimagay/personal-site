@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "totalNumber": 10,
+    "bannerImg": "testimg1.jpg",
+    "imgPath": ["tiktak1.jpg", "tiktak2.jpg", "tiktak3.jpg", "tiktak4.jpg"],
+    "title": "LOREM IPSUM GENERATOR",
+    "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "projectLink": "http://www.tiktak.com.tr"
+  },
+  {
+    "id": 2,
+    "totalNumber": 10,
+    "bannerImg": "testimg2.jpg",
+    "imgPath": ["testimg1.jpg", "testimg2.jpg", "testimg3.jpg"],
+    "title": "LOREM IPSUM GENERATOR2",
+    "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "projectLink": "www.tiktak.com.tr"
+  },
+  {
+    "id": 3,
+    "totalNumber": 10,
+    "bannerImg": "testimg3.jpg",
+    "imgPath": ["testimg1.jpg", "testimg2.jpg", "testimg3.jpg"],
+    "title": "LOREM IPSUM GENERATOR3",
+    "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "projectLink": "www.tiktak.com.tr"
+  },
+  {
+    "id": 4,
+    "totalNumber": 10,
+    "bannerImg": "testimg1.jpg",
+    "imgPath": ["testimg1.jpg", "testimg2.jpg", "testimg3.jpg"],
+    "title": "LOREM IPSUM GENERATOR4",
+    "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "projectLink": "www.tiktak.com.tr"
+  },
+  {
+    "id": 5,
+    "totalNumber": 10,
+    "bannerImg": "testimg2.jpg",
+    "imgPath": ["testimg1.jpg", "testimg2.jpg", "testimg3.jpg"],
+    "title": "LOREM IPSUM GENERATOR5",
+    "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "projectLink": "www.tiktak.com.tr"
+  }
+]

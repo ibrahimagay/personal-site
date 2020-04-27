@@ -7,7 +7,7 @@ export default function Avatar(props) {
       name="İBRAHİM AGAY"
       className="bgImage"
       to="/"
-      exact="true"
+      exact={true}
     />
   );
 }

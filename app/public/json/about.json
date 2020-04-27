@@ -1,0 +1,17 @@
+{
+  "imgPath": [
+    "testimg1.jpg",
+    "testimg2.jpg",
+    "testimg3.jpg"
+  ],
+  "title": "FRONT END DEVELOPER",
+  "description": "Hello! My name is Ibrahim AGAY and I am a Front End Developer, I work with Lemonly building awesome interactive infographics, cool ways to visualize data, and lightning fast NodeJS web apps and WordPress themes, and with clients all over the world making their vision a reality.",
+  "featureTitle": "Some of the things I do every day:",
+  "feature": [
+    "HTML/CSS",
+    "JavaScript",
+    "Front-end MVC frameworks like Backbone and React",
+    "NodeJS",
+    "PhoneGap/Cordova/Ionic Framework"
+  ]
+}

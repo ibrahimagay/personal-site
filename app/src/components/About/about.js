@@ -2,6 +2,28 @@ import React from 'react';
 import Slider from 'react-slick';
 
 class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      aboutData: {
+        feature: [],
+        imgPath: [],
+      },
+    };
+  }
+
+  componentWillMount() {
+    fetch(`json/about.json`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((aboutData) => {
+        this.setState({
+          aboutData: aboutData,
+        });
+      });
+  }
+
   render() {
     const settings = {
       dots: true,
@@ -10,50 +32,35 @@ class About extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      fade: true,
+      fade: false,
       cssEase: 'linear',
     };
+
     return (
       <div className="aboutBox">
         <div className="top">
-          <h1>FRONT END DEVELOPER</h1>
+          <h1>{this.state.aboutData.title}</h1>
         </div>
+
         <div className="center">
-          Hello! My name is Ibrahim AGAY and I am a Front End Developer, I work
-          with Lemonly building awesome interactive infographics, cool ways to
-          visualize data, and lightning fast NodeJS web apps and WordPress
-          themes, and with clients all over the world making their vision a
-          reality.<br></br>
+          {this.state.aboutData.description}
           <br></br>
-          <span>Some of the things I do every day:</span>
+          <br></br>
+          <span>{this.state.aboutData.featureTitle}</span>
           <ul>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Front-end MVC frameworks like Backbone and React</li>
-            <li>NodeJS</li>
-            <li>PhoneGap/Cordova/Ionic Framework</li>
+            {this.state.aboutData.feature.map((item) => (
+              <li>{item}</li>
+            ))}
           </ul>
         </div>
+
         <div className="bottom">
           <Slider {...settings}>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
-            <div>
-              <img src="https://www.webtasarimavcilar.com/dosyalar/2019/07/html5.png"></img>
-            </div>
+            {this.state.aboutData.imgPath.map((item) => (
+              <div>
+                <img src={`images/about/${item}`} alt="..."></img>
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
