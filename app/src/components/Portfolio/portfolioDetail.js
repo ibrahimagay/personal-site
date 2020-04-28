@@ -26,19 +26,19 @@ class PortfolioDetail extends React.Component {
   render() {
     return (
       <div className="portfolioDetail">        
-        {this.state.portfolioDetail.map((item) => (
+        {this.state.portfolioDetail.slice(0,1).map((item) => (
           <h1>{item.title}</h1>
         ))}
         <div className="portfolioDetailBox">
           <div className="container">
             <div className="top">
-              {this.state.portfolioDetail.map((item) => (
+              {this.state.portfolioDetail.slice(0,1).map((item) => (
                 <p>{item.content}</p>
               ))}
               <br></br>
               <br></br>
             </div>
-            {this.state.portfolioDetail.map((porfolioImg) => (
+            {this.state.portfolioDetail.slice(0,1).map((porfolioImg) => (
               <div className="center">
                 {porfolioImg.imgPath.map((item) => (
                   <React.Fragment>
@@ -48,7 +48,7 @@ class PortfolioDetail extends React.Component {
               </div>
             ))}
             <div className="bottom">
-            {this.state.portfolioDetail.map((item) =>  (
+            {this.state.portfolioDetail.slice(0,1).map((item) =>  (
               <a href={item.projectLink} target="_blank" class="btn">
                 <span class="text">Projeye git</span>
                 <span class="web">{item.projectLink}</span>
