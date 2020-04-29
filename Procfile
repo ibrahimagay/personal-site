@@ -1,3 +1,3 @@
 "scripts": {
-  "start": "cd app && npm install && npm start
+  "start": "cd app && npm install && npm start"
 }
