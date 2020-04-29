@@ -93,6 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .blogBox .pagination li a:hover, .blogBox .pagination li a.active {
