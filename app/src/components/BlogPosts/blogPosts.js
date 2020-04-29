@@ -1,8 +1,9 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
 import { withRouter } from 'react-router';
+const countPerPage = 10;
 
-class BlogPosts extends React.Component {
+class BlogPosts extends React.Component { 
   constructor(props) {
     super(props);
     console.log(props.history);
@@ -26,14 +27,13 @@ class BlogPosts extends React.Component {
 
   fetchPosts() {
     fetch(`json/blog.json`)
-      .then((response) => {
-        this.setState({
-          totalCount:17,
-        });
+      .then((response) => {        
         return response.json();
       })
       .then((blogPosts) => {
+        debugger;
         this.setState({
+          totalCount:blogPosts.length,         
           blogPosts: blogPosts,
           isLoading: false,
         });
@@ -45,12 +45,13 @@ class BlogPosts extends React.Component {
   }
 
   blogPosts() {
+    debugger;
     if (this.state.blogPosts.length === 0) {
       return <span style={{ color: 'red' }}>YETERLİ KAYIT BULUNAMADI!</span>;
     } else {
       return (
         <React.Fragment>
-          {this.state.blogPosts.slice(0,10).map(function (item) {
+          {this.state.blogPosts.slice((this.state.activePage - 1) * countPerPage,this.state.activePage * countPerPage).map(function (item) {
             return <BlogPostsItem key={item.id} {...item} />;
           })}
         </React.Fragment>
@@ -71,7 +72,7 @@ class BlogPosts extends React.Component {
         </ul>
         <Pagination
           activePage={this.state.activePage}
-          itemsCountPerPage={10}
+          itemsCountPerPage={countPerPage}
           totalItemsCount={this.state.totalCount}
           pageRangeDisplayed={5}
           onChange={this.handlePageChange.bind(this)}
