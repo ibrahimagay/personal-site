@@ -1,23 +1,22 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
-import { withRouter } from 'react-router';
+import {withRouter} from 'react-router';
 
 class BlogPosts extends React.Component {
   constructor(props) {
     super(props);
     console.log(props.history);
-    console.log(props.history.length);
     this.state = {
-      blogPosts: [],
+      posts: [],
       isLoading: true,
       activePage:
-        parseInt(new URLSearchParams(window.location.search).get('page')) || 1,
+        parseInt(new URLSearchParams(window.location.search).get('sayfa')) || 1,
       totalCount: 0,
     };
   }
 
   handlePageChange(pageNumber) {
-    this.props.history.push(`/blog?page=${pageNumber}`);
+    this.props.history.push(`/blog?sayfa=${pageNumber}`);
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     this.setState({ activePage: pageNumber }, () =>
       this.fetchPosts(pageNumber)
@@ -25,35 +24,38 @@ class BlogPosts extends React.Component {
   }
 
   fetchPosts() {
-    fetch(`json/blog.json`)
+    fetch(
+      `https://jsonplaceholder.typicode.com/posts?_page=${this.state.activePage}&_limit=10`
+    )
       .then((response) => {
         this.setState({
-          totalCount:17,
+          totalCount: parseInt(response.headers.get('x-total-count')),
         });
         return response.json();
       })
-      .then((blogPosts) => {
+      .then((posts) => {
         this.setState({
-          blogPosts: blogPosts,
+          posts: posts,
           isLoading: false,
         });
       });
   }
 
   componentWillMount() {
+    console.log('componentWillMount');
     this.fetchPosts();
   }
 
   blogPosts() {
-    if (this.state.blogPosts.length === 0) {
+    if (this.state.posts.length === 0) {
       return <span style={{ color: 'red' }}>YETERLİ KAYIT BULUNAMADI!</span>;
     } else {
       return (
-        <React.Fragment>
-          {this.state.blogPosts.slice(0,10).map(function (item) {
+        <ul>
+          {this.state.posts.map(function (item) {
             return <BlogPostsItem key={item.id} {...item} />;
           })}
-        </React.Fragment>
+        </ul>
       );
     }
   }
@@ -79,20 +81,22 @@ class BlogPosts extends React.Component {
       </div>
     );
   }
+
 }
 
 export default withRouter(BlogPosts);
 
+
 function BlogPostsItem(props) {
-  const {id, title, description, number, totalNumber} = props;
+  const { title, body, id, userId, ...anchorProps } = props;
   return (
     <li>
-      <a id="blogUl_link" href={`blog/detail/${id}`} totalnumber={totalNumber}>
+      <a {...anchorProps} href="{title}" target="_blank">
         <div className="number">
-          - <span>{number}</span> -
+          - <span>{id}</span> -
         </div>
         <div className="title">{title}</div>
-        <div className="desc">{description}</div>
+        <div className="desc">{body}</div>
       </a>
     </li>
   );

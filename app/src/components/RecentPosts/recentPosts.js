@@ -10,23 +10,23 @@ export default class RecentPosts extends React.Component {
   }
 
   componentWillMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(`json/blog.json`)
       .then((response) => response.json())
       .then((json) => {
         this.setState({
-          posts: json,
+          recentBlogPost: json,
           isLoading: false,
         });
       });
   }
 
   renderPosts() {
-    if (this.state.posts.length === 0) {
+    if (this.state.recentBlogPost.length === 0) {
       return <span style={{ color: 'red' }}>YETERLİ KAYIT BULUNAMADI!</span>;
     } else {
       return (
         <ul>
-          {this.state.posts.slice(0,10).map(function (item) {
+          {this.state.recentBlogPost.slice(0,10).map(function (item) {
             return <RecentPostsItem key={item.id} {...item} />;
           })}
         </ul>
@@ -48,10 +48,10 @@ export default class RecentPosts extends React.Component {
   }
 }
 function RecentPostsItem(props) {
-  const { title, userId, ...anchorProps } = props;
+  const {id, title} = props;
   return (
     <li>
-      <a {...anchorProps} href={title}>
+      <a href={`blog/detail/${id}`}>
         {title}
       </a>
     </li>

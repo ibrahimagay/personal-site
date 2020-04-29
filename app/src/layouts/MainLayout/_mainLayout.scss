@@ -26,7 +26,7 @@ body{background:#faf8f8; font-family: monospace;font-weight: bold; font-size: 14
                 ul{width:100%; padding: 0 5px 0 30px; 
                     li{width:100%; margin: 0 0 15px 0; position: relative;
                         &:before{content:''; width:6px; height: 6px; background: #282828; border-radius: 50%; position: absolute; left:-20px; top:7px;}
-                        a{width:100%; color:#42a67b; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; display: -webkit-box; word-break: break-word; overflow: hidden; height: 38px;transition: color .4s ease; 
+                        a{width:100%; color:#42a67b;  -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; display: -webkit-box; word-break: break-word; overflow: hidden; height: 38px;transition: color .4s ease; text-transform: lowercase; 
                             &:hover{color:#323232; }
                         }
                     }

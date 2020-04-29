@@ -176,6 +176,7 @@ body {
   overflow: hidden;
   height: 38px;
   transition: color .4s ease;
+  text-transform: lowercase;
 }
 
 .main .homeBox .rightBox .recentPosts ul li a:hover {
