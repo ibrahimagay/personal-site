@@ -20,3 +20,23 @@
         }
     }                
 }
+
+.blogDetail{width:100%; padding:0 50px;
+    h1{width:calc(100% - 550px); padding:30px 0 15px 0; margin:0; text-align: center;  font-size:48px; color:#323232; font-style:italic; position: fixed; top:0; left: 275px; z-index: 2; background-color:#ececec; }
+    .blogDetailBox{width: 100%; display:flex; flex-direction: column;  margin: 150px 0 0 0;
+      .container{width:960px; margin:0 auto;}
+      .top{width:100%; display: flex; flex-direction: column; color: #42a67b;font-size: 16px; line-height: 28px;  text-align: center; font-weight: normal;}
+      .center{width:100%; display: flex; flex-direction: column; position: relative; 
+          img{width:100%;}      
+      }
+      .bottom{width:100%; display: flex; flex-direction: column; margin: 0 0 100px 0;
+        .btn {width:400px; height: 100px; margin:0 auto; background: #ecedef; color: #23262c; display: flex; flex-direction: column; align-items: center; justify-content: center; transition:background .4s ease-in-out;
+          &:hover {background: #23262c;
+            .text, .web { color: #fff;}
+          }
+          .text { font-size: 30px; line-height: 40px; color: #23262c; font-weight: bold; margin:0 0 10px 0; transition:color .4s ease-in-out;}
+          .web {  font-size: 16px; line-height: 20px; color: #23262c; font-weight: normal; transition:color .4s ease-in-out;} 
+        }
+      }
+    }
+  }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
-import { withRouter } from 'react-router';
+import {withRouter } from 'react-router';
+import {Link} from 'react-router-dom';
+
 const countPerPage = 10;
 
 class BlogPosts extends React.Component { 
@@ -85,16 +87,16 @@ class BlogPosts extends React.Component {
 export default withRouter(BlogPosts);
 
 function BlogPostsItem(props) {
-  const {id, title, description, number, totalNumber} = props;
+  const {title, description, number, totalNumber} = props;
   return (
     <li>
-      <a id="blogUl_link" href={`blog/detail/${id}`} totalnumber={totalNumber}>
+      <Link id="blogUl_link" to={`/blogDetail`} totalnumber={totalNumber}>
         <div className="number">
           - <span>{number}</span> -
         </div>
         <div className="title">{title}</div>
         <div className="desc">{description}</div>
-      </a>
+      </Link>
     </li>
   );
 }
