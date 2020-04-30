@@ -1,10 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class RecentPosts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
+      recentBlogPost: [],
       isLoading: true,
     };
   }
@@ -48,12 +49,12 @@ export default class RecentPosts extends React.Component {
   }
 }
 function RecentPostsItem(props) {
-  const {id, title} = props;
+  const {title} = props;
   return (
     <li>
-      <a href={`blog/detail/${id}`}>
+      <Link to={`/blogDetail`}>
         {title}
-      </a>
+      </Link>
     </li>
   );
 }
