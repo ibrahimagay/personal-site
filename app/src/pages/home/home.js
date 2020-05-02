@@ -1,12 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './_home.scss';
 import AboutComponent from '../../components/About/about';
 
-export default class Home extends React.Component { 
+export default class Home extends React.Component {
   render() {
     return (
       <section className="contentBox">
-        <AboutComponent/>
+        <Helmet>
+          <title>HOME - İBRAHİM AGAY</title>
+        </Helmet>
+        <AboutComponent />
       </section>
     );
   }

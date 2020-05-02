@@ -1,11 +1,11 @@
 import React from 'react';
 import Pagination from 'react-js-pagination';
-import {withRouter } from 'react-router';
-import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const countPerPage = 10;
 
-class BlogPosts extends React.Component { 
+class BlogPosts extends React.Component {
   constructor(props) {
     super(props);
     console.log(props.history);
@@ -29,13 +29,13 @@ class BlogPosts extends React.Component {
 
   fetchPosts() {
     fetch(`json/blog.json`)
-      .then((response) => {        
+      .then((response) => {
         return response.json();
       })
       .then((blogPosts) => {
         debugger;
         this.setState({
-          totalCount:blogPosts.length,         
+          totalCount: blogPosts.length,
           blogPosts: blogPosts,
           isLoading: false,
         });
@@ -53,9 +53,14 @@ class BlogPosts extends React.Component {
     } else {
       return (
         <React.Fragment>
-          {this.state.blogPosts.slice((this.state.activePage - 1) * countPerPage,this.state.activePage * countPerPage).map(function (item) {
-            return <BlogPostsItem key={item.id} {...item} />;
-          })}
+          {this.state.blogPosts
+            .slice(
+              (this.state.activePage - 1) * countPerPage,
+              this.state.activePage * countPerPage
+            )
+            .map(function (item) {
+              return <BlogPostsItem key={item.id} {...item} />;
+            })}
         </React.Fragment>
       );
     }
@@ -87,7 +92,7 @@ class BlogPosts extends React.Component {
 export default withRouter(BlogPosts);
 
 function BlogPostsItem(props) {
-  const {title, description, number, totalNumber} = props;
+  const { title, description, number, totalNumber } = props;
   return (
     <li>
       <Link id="blogUl_link" to={`/blogDetail`} totalnumber={totalNumber}>
