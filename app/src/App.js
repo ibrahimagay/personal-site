@@ -7,6 +7,7 @@ import BlogDetail from './pages/blog/blogDetail.js';
 import Portfolio from './pages/portfolio/portfolio.js';
 import PortfolioDetail from './pages/portfolio/portfolioDetail.js';
 import Contact from './pages/contact/contact.js';
+import Deneme from './pages/_deneme/deneme.js';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/deneme">
+          <Deneme />
         </Route>
       </Switch>
       </MainLayout>

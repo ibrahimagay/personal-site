@@ -7,6 +7,7 @@ export default function Menu(props) {
     { name: 'BLOG', to: '/blog' },
     { name: 'PORTFOLIO', to: '/portfolio' },
     { name: 'CONTACT', to: '/contact' },
+    { name: 'DENEME', to: '/deneme' },
   ];
   return (
     <div className="bottom">
