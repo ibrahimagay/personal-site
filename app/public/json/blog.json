@@ -82,6 +82,7 @@
   },
   {
     "id": 11,
+    "number": "11",
     "imgPath": ["testimg1.jpg"],
     "title": "LOREM IPSUM GENERATOR",
     "description": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
