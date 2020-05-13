@@ -20,7 +20,7 @@ function BlogPosts(props) {
     parseInt(new URLSearchParams(window.location.search).get('page')) || 1
   );
 
- function fetchPosts() {
+  function fetchPosts() {
     fetch(`json/blog.json`)
       .then((response) => {
         return response.json();
@@ -31,11 +31,11 @@ function BlogPosts(props) {
       });
   }
 
-  function handlePageChange(pageNumber) {    
-    props.history.push(`/blog?page=${pageNumber}`);    
+  function handlePageChange(pageNumber) {
+    props.history.push(`/blog?page=${pageNumber}`);
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     setActivePage(pageNumber);
-    fetchPosts();  
+    fetchPosts();
   }
 
   useEffect(() => {
@@ -46,17 +46,19 @@ function BlogPosts(props) {
     <div className="blogBox">
       <h1>- BLOG -</h1>
       <ul className="blogUl">
-        {blogPosts.slice((activePage - 1) * countPerPage, activePage * countPerPage).map((item) => (
-          <li>
-            <Link id="blogUl_link" to={`/blogDetail`}>
-              <div className="number">
-                - <span>{item.number}</span> -
-              </div>
-              <div className="title">{item.title}</div>
-              <div className="desc">{item.description}</div>
-            </Link>
-          </li>
-        ))}
+        {blogPosts
+          .slice((activePage - 1) * countPerPage, activePage * countPerPage)
+          .map((item) => (
+            <li key={item.id}>
+              <Link id="blogUl_link" to={`/blogDetail`}>
+                <div className="number">
+                  - <span>{item.number}</span> -
+                </div>
+                <div className="title">{item.title}</div>
+                <div className="desc">{item.description}</div>
+              </Link>
+            </li>
+          ))}
       </ul>
       <Pagination
         activePage={activePage}
