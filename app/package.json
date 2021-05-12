@@ -17,7 +17,7 @@
     "react-scripts": "3.4.1",
     "react-scrollable-pagination": "^1.0.2",
     "react-slick": "^0.25.2",
-    "swiper": "^5.3.7"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
